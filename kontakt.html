@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Pogotowie komputerowe</title>
+    <link rel="stylesheet" href="styl.css" type="text/css">
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+
+<body>
+    <div class="kontener">
+
+        <div class="baner">
+            <img src="animacja.gif" alt="animacja">
+        </div>
+
+        <div class="menu">
+            <a href="index.html">O nas</a>
+            <a href="kontakt.html">Kontakt</a>
+        </div>
+
+        <div class="g1">
+
+        </div>
+
+        <div class="g2">
+            <h3>Formularz kontaktowy</h3>
+            <form>
+                <table>
+                    <tr>
+                        <td>Imię: </td>
+                        <td><input type="text" id="imie"></td>
+                    </tr>
+                    <tr>
+                        <td>Nazwisko: </td>
+                        <td><input type="text" id="nazw"></td>
+                    </tr>
+                    <tr>
+                        <td>E-mail: </td>
+                        <td><input type="text" id="mail"></td>
+                    </tr>
+                    <tr>
+                        <td>Usługa: </td>
+                        <td><select id="usluga"> <option>naprawa komputera</option> <option>odzyskiwanie danych</option> <option>problemy z oprogramowaniem</option> <option>konfiguracja sieci LAN</option> <option>inne</option> </select></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><label><input type="checkbox" checked>Wyślij kopię wiadomości</label></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button id="reset" type="reset">Resetuj</button> <button id="sub" type="submit" onclick="dane(); return false">Prześlij</button></td>
+                    </tr>
+                </table>
+            </form>
+            <p id="wypisz"></p>
+            <script>
+                function dane() {
+                    var imie = document.getElementById("imie").value;
+                    var nazwisko = document.getElementById("nazw").value;
+                    var mail = document.getElementById("mail").value;
+                    var usluga = document.getElementById("usluga").value;
+                    var info = document.getElementById("wypisz");
+                    var ema = mail.toLowerCase();
+
+                    info.innerHTML = imie + " " + nazwisko + "<br>" + ema + "<br>" + "Usługa: " + usluga;
+                }
+            </script>
+
+        </div>
+
+        <div class="g3">
+
+        </div>
+
+        <div class="stopka">
+            <p>Autor strony: <b>00000000000</b></p>
+        </div>
+
+    </div>
+</body>
+
+</html>
